@@ -125,7 +125,10 @@ var Game = function(){
 			cur.down();
 			setData();
 			refreshDiv(gameData, gameDivs);
-		}		
+			//如果还能向下， 则支持快速下坠
+			return true;
+		}
+		return false;
 	}
 
 	//左移
@@ -183,5 +186,8 @@ var Game = function(){
 	this.left = left;
 	this.right = right;
 	this.rotate = rotate;
+	this.fall = function(){
+		while(down());
+	}
 
 }

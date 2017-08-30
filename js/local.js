@@ -18,6 +18,7 @@ var Local = function(){
 				game.left();
 			}else if(e.keyCode == 32){
 				//space
+				game.fall();
 			}
 		}
 	}
